@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <title>Smart Company - Contract Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/main.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/">
+        <img src="./img/logo_brand.svg" height="50" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Chi siamo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Servizi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline">-->
+        <!--<a href="register.hbs" class="btn btn-outline-success my-2 my-sm-0">Registrati</a>-->
+        <!--</form>-->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card signup-form col-xs-12 col-lg-8" style="padding-right:0px;padding-left:0px;">
+            <div class="card-header text-center">
+                <img src="./img/logo_brand.svg" height="100" alt="" style="margin-bottom:20px;">
+                <br>
+                <h2>Attivazione del servizio</h2>
+            </div>
+            <div class="card-body">
+                <form action="/action" method="post">
+                    <h4><b>Condizioni generali di fornitura</b></h4>
+                    <div class="terms-conditions">
+                        <p>Art. 1 - Definizioni e normative di riferimento
+                            1.1 Ai fini del presente Contratto si applicano le seguenti definizioni e normative:
+                            Autorità o AEEGSI: è l’Autorità per l’energia elettrica il gas e il sistema idrico, istituita con
+                            la legge 14 novembre 1995, n. 481 (pubblicata in G.U. n. 270 del 18.11.1995, Suppl.
+                            Ordinario n. 136), il soggetto pubblico incaricato di regolare con proprie deliberazioni le
+                            condizioni economiche, le condizioni contrattuali e la qualità del servizio gas. I testi integrali
+                            delle delibere dell’Autorità per l’energia elettrica il gas e il sistema idrico possono essere
+                            consultati e scaricati dal sito www.autorita.energia.it.
+                            Attivazione contestata: è lo switching e/o l’accesso per sostituzione compiuti a seguito di
+                            un contratto contestato.
+                            Attivazione della fornitura: è l’avvio dell’alimentazione del punto di riconsegna, a seguito o
+                            di un nuovo contratto di fornitura, o di modifica delle condizioni contrattuali, o di subentro ad
+                            una fornitura preesistente disattivata, attraverso interventi limitati al gruppo di misura,
+                            inclusa l’eventuale installazione del gruppo di misura o sua sostituzione.
+                            Bolletta 2.0: è l’Allegato A alla deliberazione dell’Autorità 16 ottobre 2014, 501/2014/R/com
+                            recante “Bolletta 2.0: criteri per la trasparenza delle bollette per consumi di elettricità e/o di
+                            gas distribuito a mezzo di reti urbane”.
+                            Cessazione amministrativa del punto di riconsegna per morosità: azione finalizzata a
+                            cessare il servizio di distribuzione presso il PdR corrispondente al contratto risolto per
+                            inadempimento. Se la cessazione amministrativa per morosità riguarda un PdR non
+                            disalimentabile, il Distributore garantisce la continuità dei prelievi mediante l’attivazione del
+                            “Servizio di ultima istanza” ovvero, qualora ne sia impossibile l’attivazione, la disciplina del
+                            “Servizio di default” come previsto all’art. 16 del TIMG.</p>
+                    </div>
+                    <div class="form-group" style="margin-top:40px;">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input register" id="customCheck1" disabled>
+                            <label class="custom-control-label" for="customCheck1"><b>Dichiaro di aver preso visione e di accettare le condizioni sopra riportate.</b></label>
+                        </div>
+                    </div>
+                    <div>
+                        <input type="hidden" name="type" value="contract">
+                    </div>
+                    <div class="container text-center">
+                        <button type="submit" class="btn register" disabled>Attiva il servizio</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    $('.terms-conditions').scroll(function () {
+        if ($(this).scrollTop() == $(this)[0].scrollHeight - $(this).height()) {
+            $('.register').removeAttr('disabled');
+        }
+    });
+</script>
+</body>
+
+</html>
