@@ -1,11 +1,12 @@
 import express, {Application} from "express";
 import bodyParser = require("body-parser");
 import path from "path";
-import {indexRoute} from "./routes";
+import {cleanRoute} from "./routes/clean";
 import {middleware, register} from "./libs/errorMiddleware";
 import {AddressInfo} from "net";
 import {print} from "./libs/asciiart";
 import joiErrorAdapter from "./libs/errorAdapters/joiErrorAdapter";
+import {wiasRoute} from "./routes/wias";
 
 register(joiErrorAdapter);
 
@@ -47,7 +48,8 @@ export class Server {
     }
 
     private async routes() {
-        this.app.use((await indexRoute).path, (await indexRoute).router);
+        this.app.use((await cleanRoute).path, (await cleanRoute).router);
+        this.app.use((await wiasRoute).path, (await wiasRoute).router);
     }
 
     private errorHandling() {

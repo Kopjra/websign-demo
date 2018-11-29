@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <title>Smart Company - Consent Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+          crossorigin="anonymous">
+    <style>.col-centered,.row-centered{text-align:center}body{color:#444;background:#212226;font-family:Roboto,sans-serif}.alt-cta,.btn-outline-success{background-image:none;border-color:#38d07e}.col-centered{display:inline-block;float:none;margin-right:-4px;vertical-align:top}.btn-outline-success{color:#38d07e;background-color:transparent}.btn-outline-success:focus,.btn-outline-success:hover{background-color:#38d07e;border-color:#38d07e}nav{z-index:10}.hero{margin-top:-75px;height:100vh;display:flex;justify-content:center;align-items:center;z-index:9;position:relative}.hero-logo{max-width:500px;margin-bottom:70px}.hero h1{color:#fff;font-size:1.6em;font-weight:700;letter-spacing:4px;margin-bottom:70px}.hero .btn{margin:0 10px}.alt-cta{font-size:1.3em;font-weight:700;color:#38d07e;background-color:transparent;margin-top:20px;padding:10px 50px}.card{border:none;margin-top:50px}.card-header{padding:20px;background:#47525c}.form-control{border:2px solid #aaa;min-height:45px;box-shadow:none!important}.btn,.form-control,.signup-form form{border-radius:5px}.form-control:focus{border-color:#0ba250}.signup-form h2{color:#fff;display:inline-block}.signup-form form{color:#444;margin-bottom:15px;background:#fff;padding:30px}.signup-form .form-group{margin-bottom:20px}.signup-form label{font-weight:400;font-size:1em}.main-cta,.modal-footer .btn,.signup-form .btn{font-size:1.3em;color:#fff;border:none;padding:10px 50px;font-weight:700}.main-cta,.signup-form .btn{background:#0ba250;margin-top:20px}.custom-checkbox .custom-control-input:disabled:checked~.custom-control-label::before{background-color:rgba(51,188,114,.44)}.custom-checkbox .custom-control-input:checked~.custom-control-label::before{background-color:#0ba250}.custom-control-input:checked~.custom-control-label::before{color:#fff;background-color:#0ba250}.modal-footer .btn{background:#0ba250}@media (min-width:576px){.modal-dialog{max-width:1000px;margin:1.75rem auto}}.terms-conditions{height:300px;overflow-y:scroll;margin:30px 0 0}.thanks h1{margin-bottom:30px}.thanks h2{font-size:1.5em;color:#888}.modal-footer .btn:focus,.modal-footer .btn:hover,.signup-form .btn:focus,.signup-form .btn:hover{background:#38d07e;outline:0!important}.signup-form a,a{color:#0ba250;font-weight:700;text-decoration:underline}.hero a,.navbar a{text-decoration:none}#exampleModal a:hover,.signup-form a:hover{color:#38d07e!important}.signup-form form a{color:#0ba250}.signup-form form a:hover{text-decoration:underline}</style>
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand">
+        <img src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 237.35 97.39"><defs><style>.cls-1{fill:#dcdcdc}.cls-2{fill:#fff}.cls-3{fill:#33bc72}</style></defs><g id="Livello_2" data-name="Livello 2"><g id="Livello_38" data-name="Livello 38"><path class="cls-1" d="M42.08 76.23H22.77a6.1 6.1 0 0 1-6-5.14c-.94-5.54-3.71-9.38-6.93-13.82a59.64 59.64 0 0 1-7.29-12.21v-.1A32 32 0 0 1 0 32.43 32.43 32.43 0 1 1 62.31 45 58.94 58.94 0 0 1 55 57.26c-3.21 4.45-6 8.29-6.93 13.83a6.09 6.09 0 0 1-5.99 5.14zM4.46 44.45a58.9 58.9 0 0 0 7 11.64c3.22 4.46 6.26 8.67 7.28 14.67a4.11 4.11 0 0 0 4 3.47h19.34a4.1 4.1 0 0 0 4-3.47c1-6 4.06-10.21 7.28-14.67a57.59 57.59 0 0 0 7.09-11.8v-.1A30.43 30.43 0 1 0 2 32.43a30.13 30.13 0 0 0 2.39 11.83z"/><path class="cls-2" d="M28.51 76.16a.94.94 0 0 1-.94-.93c0-9.51-4.17-17.59-8.21-25.4-3.4-6.56-6.6-12.76-6.6-18.92a.93.93 0 0 1 1.86 0c0 5.71 3.1 11.71 6.39 18.06 3.95 7.64 8.43 16.29 8.43 26.26a.93.93 0 0 1-.93.93zM36.24 76.16a.93.93 0 0 0 .93-.93c0-9.51 4.17-17.59 8.21-25.4 3.4-6.56 6.6-12.76 6.6-18.92a.93.93 0 0 0-1.86 0c0 5.71-3.1 11.71-6.39 18.06-3.95 7.64-8.43 16.29-8.43 26.26a.94.94 0 0 0 .94.93z"/><path class="cls-3" d="M41.71 37.83l1.4-2.95a.38.38 0 0 1 .31-.22.37.37 0 0 1 .35.13l2.09 2.51a4.12 4.12 0 0 0 2.65 1.43 28.43 28.43 0 0 0 1.28-4.61 1.79 1.79 0 0 0-.39.67.38.38 0 0 1-.3.26.38.38 0 0 1-.38-.14l-2.09-2.5a4.11 4.11 0 0 0-6.88.87l-1.41 2.95a.37.37 0 0 1-.33.22.34.34 0 0 1-.35-.18l-1.76-2.75a4.12 4.12 0 0 0-6.94 0l-1.77 2.75a.33.33 0 0 1-.35.18.39.39 0 0 1-.33-.22l-1.4-2.95a4.12 4.12 0 0 0-6.88-.87l-2.1 2.5a.36.36 0 0 1-.37.14.38.38 0 0 1-.3-.26 1.75 1.75 0 0 0-.53-.77 28.88 28.88 0 0 0 1.31 4.73A4.07 4.07 0 0 0 19 37.3l2.1-2.51a.36.36 0 0 1 .35-.13.37.37 0 0 1 .3.22l1.4 2.95a4.13 4.13 0 0 0 3.47 2.34h.26a4.1 4.1 0 0 0 3.46-1.9l1.77-2.75a.35.35 0 0 1 .66 0l1.76 2.75a4.12 4.12 0 0 0 7.19-.45z"/><path class="cls-1" d="M32.75 97.39a3.94 3.94 0 0 1-2.23-.69l-11.37-7.8h27.2L35 96.7a3.88 3.88 0 0 1-2.25.69zM25.6 90.9l6 4.15a2 2 0 0 0 2.19 0l6-4.15z"/><path class="cls-1" d="M44.83 90.89H20a2.61 2.61 0 0 1-2.6-2.6V76.83a2.6 2.6 0 0 1 2.6-2.6h24.83a2.6 2.6 0 0 1 2.6 2.6v11.46a2.61 2.61 0 0 1-2.6 2.6zM20 76.23a.61.61 0 0 0-.6.6v11.46a.61.61 0 0 0 .6.6h24.83a.6.6 0 0 0 .6-.6V76.83a.6.6 0 0 0-.6-.6z"/><path class="cls-3" d="M91 30.12a7.15 7.15 0 0 0-6-3.13c-3.83 0-5 2.41-5 4.28a3.1 3.1 0 0 0 1.15 2.46c.88.82 2.08 1.26 4.38 2.08 2.85 1 5.53 2 7.4 3.67a9.94 9.94 0 0 1 3.12 7.67c0 7.12-5.15 12-12.71 12a15 15 0 0 1-12.59-6.9l4.65-4.44a8.57 8.57 0 0 0 7.67 4.88c3.23 0 5.64-2 5.64-5a4.26 4.26 0 0 0-1.43-3.29c-1.36-1.26-3.55-2-5.64-2.68a17.66 17.66 0 0 1-6.07-3.17 8.51 8.51 0 0 1-2.91-6.8C72.67 26.34 76.29 21 84.39 21a14.05 14.05 0 0 1 10.35 4.27zM106.68 21.79h5.15L121.52 45l10.14-23.22h5.14l6.14 36.53h-7.23l-3.29-22.51-9.8 22.51h-2.41l-9.37-22.51-3.72 22.51h-7.23zM171 50.65h-14.7l-3.23 7.67h-7.72l15.72-36.53h5.58l15.28 36.53h-7.67zm-2-5.8l-5.2-13.15-5.2 13.15zM196.77 21.79c5 0 7.62 1.32 9.31 2.74a10.36 10.36 0 0 1 3.62 8.22 10 10 0 0 1-4.27 8.59 10.12 10.12 0 0 1-4 1.59l11.39 15.39H204l-9.8-14.68h-.88v14.68h-7.12V21.79zm-3.45 16.81h2c1.37 0 7-.16 7-5.53s-5.59-5.47-6.9-5.47h-2.14zM229.14 27.93v30.39H222V27.93h-8.2v-6.14h23.55v6.14z"/><path class="cls-2" d="M85.81 71l-1.16.89a6.49 6.49 0 0 0-2.32-1.9 6.75 6.75 0 0 0-3-.64 6.58 6.58 0 0 0-3.27.84 6.15 6.15 0 0 0-2.33 2.28 6.29 6.29 0 0 0-.83 3.21 6.07 6.07 0 0 0 1.85 4.51 6.44 6.44 0 0 0 4.67 1.8 6.58 6.58 0 0 0 5.19-2.43l1.16.89a7.5 7.5 0 0 1-2.75 2.17 8.67 8.67 0 0 1-3.69.76 7.66 7.66 0 0 1-6.11-2.57 7.77 7.77 0 0 1-1.87-5.26 7.33 7.33 0 0 1 2.27-5.45 7.84 7.84 0 0 1 5.69-2.21 8.27 8.27 0 0 1 3.73.82A7.23 7.23 0 0 1 85.81 71zM105.44 67.84a7.64 7.64 0 0 1 5.61 2.24 7.42 7.42 0 0 1 2.26 5.5A7.81 7.81 0 0 1 100 81.09a7.38 7.38 0 0 1-2.26-5.44 7.83 7.83 0 0 1 1-3.94 7.42 7.42 0 0 1 2.8-2.84 7.52 7.52 0 0 1 3.9-1.03zm.07 1.44a6.28 6.28 0 0 0-5.39 3.15 6.36 6.36 0 0 0-.83 3.22 6.21 6.21 0 0 0 6.22 6.25 6.4 6.4 0 0 0 3.18-.83 6.09 6.09 0 0 0 2.31-2.28 6.44 6.44 0 0 0 .82-3.21 6.33 6.33 0 0 0-.82-3.18 6.41 6.41 0 0 0-5.46-3.12zM125.25 83l2.11-14.75h.24l6 12.11 5.94-12.11h.23L141.9 83h-1.45L139 72.41 133.78 83h-.38l-5.28-10.63L126.67 83zM154.44 68.21h2.94a17.55 17.55 0 0 1 3.41.22 3.81 3.81 0 0 1 2.06 1.28 3.67 3.67 0 0 1 .8 2.43 3.74 3.74 0 0 1-.78 2.44 3.87 3.87 0 0 1-2.16 1.28 19 19 0 0 1-3.75.24h-1.05V83h-1.47zm1.47 1.45v5h2.5a6.68 6.68 0 0 0 2.22-.27 2.31 2.31 0 0 0 1.1-.9 2.53 2.53 0 0 0 0-2.73 2.19 2.19 0 0 0-1.06-.87 6.23 6.23 0 0 0-2.15-.26zM182.28 68.21L189.16 83h-1.59l-2.32-4.85h-6.36l-2.3 4.85H175l7-14.75zm-.19 3.14l-2.52 5.34h5zM201.11 83V68.21h.32l9.82 11.31V68.21h1.45V83h-.33l-9.74-11.17V83zM224.78 68.21h1.7l3.77 6.09 3.75-6.09h1.7l-4.7 7.7v7h-1.46v-7z"/></g></g></svg>' height="50" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Chi siamo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Servizi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline">-->
+        <!--<a href="register.hbs" class="btn btn-outline-success my-2 my-sm-0">Registrati</a>-->
+        <!--</form>-->
+    </div>
+</nav>
+
+<div class="container">
+    <div class="row justify-content-center">
+        <div class="card signup-form col-xs-12 col-lg-8" style="padding-right:0px;padding-left:0px;">
+            <h2 class="card-header text-center">Benvenuto!</h2>
+            <div class="card-body">
+                <form action="/websign/action" method="post">
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputName">Nome</label>
+                            <input type="text" class="form-control" id="inputName">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputSurname">Cognome</label>
+                            <input type="text" class="form-control" id="inputSurname">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="inputAddress">Indirizzo</label>
+                        <input type="text" class="form-control" id="inputAddress" placeholder="">
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputCity">Città</label>
+                            <input type="text" class="form-control" id="inputCity">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputZip">CAP</label>
+                            <input type="text" class="form-control" id="inputZip">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group col-md-6">
+                            <label for="inputEmail4">Email</label>
+                            <input type="email" class="form-control" id="inputEmail4">
+                        </div>
+                        <div class="form-group col-md-6">
+                            <label for="inputPassword4">Password</label>
+                            <input type="password" class="form-control" id="inputPassword4">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <div class="custom-control custom-checkbox">
+                            <input type="checkbox" class="custom-control-input" id="customCheck1">
+                            <label class="custom-control-label" for="customCheck1"><b>Dichiaro di aver preso visione e di accettare l'<a href="#" data-toggle="modal" data-target="#exampleModal">informativa
+                                privacy</a>.</b></label>
+                        </div>
+                    </div>
+                    <input type="hidden" name="type" value="register">
+                    <div class="container text-center">
+                        <button type="submit" class="btn">Registrati</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <img style="position: fixed; bottom: 10px; right: 10px; opacity: 0.7;" height="40" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.45 232.45"><defs><style>.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:9px}</style></defs><g id="Livello_2" data-name="Livello 2"><g id="Logo"><circle cx="116.23" cy="116.23" r="112.23" stroke-miterlimit="10" stroke-width="8" fill="none" stroke="#fff"/><path class="cls-2" d="M53.51 112.86l26.3 32.92 26.62-32.92M106.43 112.86l26.3 32.92 46.22-59.39"/></g></g></svg>'/>
+</div>
+
+<!-- Modal -->
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title" id="exampleModalLabel">INFORMATIVA PRIVACY</h1>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div class="modal-body">
+                <h3 class="text-uppercase"><strong>AMBITO DI APPLICAZIONE</strong></h3>
+                <p>Il Titolare rispetta scrupolosamente la privacy di tutti gli utenti che accedono al sito web <a href="http://www.kopjra.com/"><strong>www.kopjra.com</strong></a> ai servizi ad esso
+                    collegati (che in seguito indicheremo nel loro complesso come “Piattaforma”), da qualunque pc, applicazione, dispositivo mobile, piattaforma o altra modalità di accesso o utilizzo.
+                </p>
+                <br>
+                <p>In questa informativa vogliamo descriverti in modo trasparente, dettagliato ed esaustivo come:</p>
+                <ul>
+                    <li>raccogliamo;</li>
+                    <li>condividiamo;</li>
+                    <li>utilizziamo;</li>
+                    <li>proteggiamo;</li>
+                </ul>
+                <p>le tue informazioni personali.</p>
+                <p>Usufruendo della Piattaforma e dei suoi servizi sei consapevole che utilizzeremo i tuoi dati personali come descritto nell’informativa.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>BASE GIURIDICA</strong></h3>
+                <p>La base giuridica sulla quale si basa questa informativa è il Regolamento Europeo sulla Protezione dei Dati n. 679/2016 del 27 aprile 2016 relativo alla protezione delle persone
+                    fisiche con riguardo al trattamento e alla libera circolazione dei dati personali, in particolare l’art. 13 del Regolamento</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>A COSA NON SI RIFERISCE L’INFORMATIVA</strong></h3>
+                <p>Questa informativa non si riferisce e non regola i servizi offerti da soggetti terzi (eventualmente accessibili per mezzo di link posti sulla Piattaforma) e relative modalità di
+                    trattamento dei tuoi dati personali. </p>
+                <p>Ti consigliamo di leggere attentamente sui siti web dei soggetti terzi le loro informative privacy su come tratteranno i tuoi dati personali e come saranno eventualmente
+                    condivisi. </p>
+                <p>Su questi soggetti terzi il titolare non ha alcun controllo e declina quindi ogni responsabilità per quanto riguarda il trattamento dei tuoi dati personali effettuato da questi
+                    siti.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>AGGIORNAMENTO DELL'INFORMATIVA</strong></h3>
+                <p>Modificheremo l’informativa con integrazioni o variazioni per renderla aggiornata rispetto alla normativa e adeguata rispetto ad eventuali modifiche tecniche apportate alla
+                    Piattaforma o ad eventuali variazioni delle finalità o delle modalità del trattamento dei tuoi dati. </p>
+                <p>Ti informeremo di eventuali modifiche con specifici avvisi. Ti consigliamo comunque di controllare periodicamente questa pagina per restare aggiornati. </p>
+                <p>Ogni versione aggiornata, che sarà accompagnata dalla sua data, sarà pubblicata su questa pagina web e diventerà efficace nei tuoi confronti subito dopo la sua pubblicazione.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>TITOLARE DEL TRATTAMENTO DEI DATI PERSONALI</strong></h3>
+                <p>Il titolare dei trattamenti dei tuoi dati personali attraverso la Piattaforma è Kopjra S.r.l.. con sede legale a Schio (VI), via XX Settembre n. 51, C.F. e P.Iva 03904120247,
+                    e-mail: info@kopjra.com (che indicheremo anche come “Titolare").</p>
+                <p>È possibile contattarci inviando una mail all’indirizzo <a href="mailto:info@kopjra.com">info@kopjra.com</a>.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>QUALI SONO I DATI PERSONALI CHE RACCOGLIAMO</strong></h3>
+                <p>Quando utilizzerai la Piattaforma raccoglieremo i tuoi dati personali solo se ce li invierai direttamente o attraverso sistemi automatici che permettono il regolare funzionamento
+                    della Piattaforma. Alcuni dati personali ci servono obbligatoriamente per identificarti, altri sono facoltativi ma possono essere necessari per usufruire di alcuni servizi della
+                    Piattaforma.</p>
+                <p>In particolare, potremmo raccogliere i tuoi dati personali di queste categorie:</p>
+                <br>
+                <strong><em>1. DATI PERSONALI CHE CI FORNISCI VOLONTARIAMENTE</em></strong>
+                <br>
+                <p>Sono i dati che ci fornisci in maniera libera e facoltativa, ad esempio quando ci invii una eMail al nostro indirizzo di posta elettronica indicato sulla Piattaforma o compili il
+                    nostro form di contatti.</p>
+                <p>In questi casi acquisiremo i tuoi dati personali necessari a risponderti, oltre ad eventuali dati che ci hai inviato nella tua comunicazione. Non diffonderemo o comunicheremo a
+                    soggetti terzi questi dati, e non li utilizzeremo per definire il tuo profilo o la tua personalità. Li conserveremo infine solamente come corrispondenza.</p>
+                <p>I tuoi dati personali che ci potrai fornire volontariamente sono:</p>
+                <ul>
+                    <li>dati relativi alle modalità con cui utilizzi la Piattaforma;</li>
+                    <li>dati identificativi come nome, cognome, numero di telefono, e-Mail o altre informazioni che ci invierai tramite i form presenti sulla Piattaforma;</li>
+                    <li>le informazioni che ci fornirai in fase di registrazione alla newsletter, nonché quelle di navigazione, ivi inclusi i c.d. cookies tecnici e/o di profilazione, ecc.;</li>
+                    <li>dati identificativi come nome, cognome, numero di telefono, eMail - laddove richiesti per l’esecuzione di specifici servizi o iscrizione ai nostri eventi;</li>
+                    <li>informazioni relative alla tua navigazione all’interno della Piattaforma.</li>
+                </ul>
+                <p>La base giuridica per questi trattamenti è l’adempimento del contratto (art. 6.1-b del Regolamento) o, a seconda dei casi il perseguimento del legittimo interesse del titolare del
+                    trattamento (art. 6.1-f del Regolamento). </p>
+                <p>Il tuo consenso a questi trattamenti dei tuoi dati è facoltativo (e modificabile liberamente anche se hai acconsentito, tramite semplice richiesta all’indirizzo mail <a
+                        href="mailto:info@kopjra.com">info@kopjra.com</a> o diversa modalità indicata dal Titolare, senza alcuna formalità ulteriore) ed un tuo eventuale rifiuto non comporterà
+                    l’impossibilità di usufruire dei servizi della Piattaforma.</p>
+                <br>
+                <strong><em>2. DATI DI NAVIGAZIONE</em></strong>
+                <p>I sistemi telematici e informativi che permettono alla Piattaforma di funzionare, acquisiscono automaticamente, nel corso del loro normale esercizio, alcuni tuoi dati personali
+                    relativi alla navigazione.</p>
+                <p>In particolare, durante la navigazione sulla Piattaforma raccogliamo:</p>
+                <ul>
+                    <li>il tuo indirizzo IP;</li>
+                    <li>il numero dei tuoi accessi;</li>
+                    <li>la durata della tua navigazione;</li>
+                    <li>il nome del tuo browser;</li>
+                    <li>le pagine che hai visualizzato;</li>
+                    <li>la data e l’ora in cui hai effettuato l’accesso;</li>
+                    <li>ulteriori parametri relativi al sistema operativo che hai utilizzato per connettersi.</li>
+                </ul>
+                <p>La base giuridica per questi trattamenti è il perseguimento del legittimo interesse del titolare del trattamento (art. 6.1-f del Regolamento). </p>
+                <p><em>COME LI UTILIZZEREMO</em></p>
+                <p>Raccogliamo i tuoi dati di navigazione solamente per ottenere informazioni statistiche anonime su come utilizzi la nostra Piattaforma e per controllare che funzioni correttamente.
+                    Questi dati potrebbero tuttavia, per loro stessa natura, permettere di risalire, anche attraverso elaborazioni ed associazioni con altri dati detenuti da soggetti terzi, alla tua
+                    identità. </p>
+                <p><em>COME NON LI UTILIZZEREMO</em></p>
+                <p>I tuoi dati di navigazione non vengono in nessun caso utilizzati per finalità di marketing, per definire il tuo profilo o la tua personalità, per inviarti materiale pubblicitario,
+                    per il compimento di ricerche di mercato o di comunicazioni commerciale - e li conserveremo solo temporaneamente.</p>
+                <br>
+                <strong><em>3. ISCRIZIONE ALLA NEWSLETTER</em></strong>
+                <p>Il nostro servizio di newsletter è riservato agli utenti che effettuano una registrazione. Per la fornitura e la gestione di questo servizio, utilizziamo i servizi e gli strumenti
+                    forniti dal sito internet denominato ‘MailChimp’. Per maggiori informazioni su come questo soggetto terzo tratterà i tuoi dati personali ti consigliamo di consultare attentamente
+                    la loro informativa privacy cliccando su questo link: <a href="https://www.mailchimp.com" target="_blank">www.mailchimp.com</a>.</p>
+                <p>Se non ci fornirai i dati necessari alla registrazione, non potremmo fornirti il servizio di newsletter. La base giuridica per questi trattamenti è l’adempimento del contratto (art.
+                    6.1-b del Regolamento).</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>FINALITÀ DEL TRATTAMENTO</strong></h3>
+                <p>Utilizzeremo i tuoi dati personali per erogarti i servizi richiesti e per migliorare continuamente la tua esperienza di utilizzo della nostra Piattaforma da parte dell’utente. </p>
+                <p>Nel caso tu non abbia compiuto l’età di anni 18 (diciotto), o tu non sia in possesso della capacità di agire, questa Informativa è rivolta al soggetto a ciò preposto dalla legge
+                    italiana vigente, che rimane l’unico soggetto abilitato a fornirci il consenso al trattamento dei tuoi dati personali. </p>
+                <p>Il trattamento dei tuoi dati personali che ci hai comunicato sarà da noi effettuato, con o senza l'ausilio di strumenti elettronici, secondo principi di correttezza, liceità,
+                    trasparenza, in modo da tutelare in ogni momento la tua riservatezza e i tuoi diritti nel rispetto di quanto previsto dalla vigente normativa.</p>
+                <p>Tali dati non verranno comunque diffusi o comunicati in alcun modo a soggetti esterni, fatti salvi gli obblighi previsti dalle leggi vigenti.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>DESTINATARI DEI DATI PERSONALI</strong></h3>
+                <p>Salvo che non sia diversamente precisato in relazione alle singole finalità del trattamento come sopra specificate, i tuoi dati personali potranno essere comunicati a – o comunque
+                    venire a conoscenza di – soggetti incaricati e/o responsabili (anche esterni) del trattamento, in relazione alle competenze e funzioni di ognuno, al fine di soddisfare le finalità
+                    o per porre in essere specifici adempimenti normativi e/o contrattuali. </p>
+                <p>I dati personali che ci hai comunicato non sono in generale comunicati ad altri soggetti, a meno che ciò dovesse risultare necessario per disposizioni normative o contrattuali o per
+                    assolvere a specifici adempimenti. </p>
+                <p>In questi casi, potremmo dover comunicare tuoi dati personali ad alcuni di questi soggetti:</p>
+                <ul>
+                    <li>consulenti o collaboratori, interni e/o esterni, per il rispetto della normativa vigente e/o per l’esecuzione delle prestazioni contrattuali nei rapporti con i singoli
+                        interessati (ad esempio consulenti del lavoro, consulenti legali, commercialisti, fiscalisti, revisori dei conti, ecc.);
+                    </li>
+                    <li>autorità giudiziaria o altre pubbliche autorità, nel rispetto delle finalità del trattamento dei tuoi dati o per obblighi di legge.</li>
+                </ul>
+                <p>Puoi richiederci l'elenco completo dei responsabili del trattamento inviandoci una richiesta via mail a questo indirizzo <a href="mailto:info@kopjra.com">info@kopjra.com</a>.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>LOCALIZZAZIONE ED EVENTUALE TRASFERIMENTO DEI TUOI DATI PERSONALI</strong></h3>
+                <p>I tuoi dati personali sono memorizzati all’interno dell’Area Economica Europea (indicata anche come ‘AEE’), e nello specifico sono conservati su server da Amazon Web Services.</p>
+                <p>Ci riserviamo inoltre di trasferire i tuoi dati personali verso paesi che ci garantiscono un livello di sicurezza adeguato, sulla base delle decisioni di adeguatezza della
+                    Commissione Europea oppure sulla base delle adeguate garanzie previste dalla normativa vigente. </p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>PROTEZIONE DEI TUOI DATI PERSONALI</strong></h3>
+                <p>Utilizziamo tecnologie di criptazione particolarmente evolute e backup periodici per proteggere l’integrità e la riservatezza dei tuoi dati.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>PERIODO DI CONSERVAZIONE DEI TUOI DATI PERSONALI</strong></h3>
+                <p>Conserveremo inoltre i tuoi dati personali per tutto il tempo necessario ad adempiere le obbligazioni previste dalla legge, risolvere controversie e far valere gli accordi
+                    conclusi.</p>
+                <p>I tuoi dati personali verranno quindi conservati, secondo quanto previsto dalla legge, per un periodo di tempo non superiore a quello necessario a conseguire le finalità per le
+                    quali li stiamo trattando, in particolare:</p>
+                <ul>
+                    <li>in relazione alla gestione del rapporto contrattuale in essere, i dati saranno conservati per i tempi definiti dalla normativa di riferimento nonché, alla cessazione del
+                        rapporto, per il termine decennale per la conservazione dei soli dati di natura civilistica;
+                    </li>
+                    <li>in relazione alla gestione dei dati personali che ci hai eventualmente comunicato quando ti sei registrato ai nostri servizi e/o al servizio di newsletter per tutto il tempo in
+                        cui tale registrazione resterà attiva.
+                    </li>
+                </ul>
+                <p>In ogni caso adotteremo ogni cura per evitare un utilizzo dei tuoi dati a tempo indeterminato, procedendo con cadenza periodica a verificare in modo idoneo il tuo effettivo
+                    interesse a concederci la possibile di trattare i tuoi dati.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>QUALI SONO I TUOI DIRITTI</strong></h3>
+                <p>Come interessato del trattamento dei tuoi dati personali hai il diritto di chiederci: </p>
+                <ul>
+                    <li>la conferma che sia o meno in corso un trattamento dei tuoi dati personali e, in tal caso, di ottenerne l’accesso (diritto di accesso);</li>
+                    <li>la rettifica dei tuoi dati personali inesatti, o l’integrazione dei tuoi dati personali incompleti (diritto di rettifica);</li>
+                    <li>la cancellazione dei tuoi dati, se sussiste uno dei motivi previsti dal Regolamento (diritto all'oblio);</li>
+                    <li>la limitazione del trattamento dei tuoi dati quando ricorre una delle ipotesi previste dal Regolamento (diritto di limitazione);</li>
+                    <li>di ricevere in un formato strutturato, di uso comune e leggibile da dispositivo automatico i tuoi dati e di trasmettere, ove tecnicamente possibile, tali dati a un altro
+                        titolare del trattamento (diritto alla portabilità).
+                    </li>
+                    <li>il diritto di revocare il consenso al trattamento dei tuoi dati, in qualsiasi momento, senza pregiudicare la liceità del trattamento basata sul consenso prestato prima della
+                        revoca e di opporti in qualsiasi momento al trattamento per finalità di marketing o diversa finalità ulteriori (diritto di opposizione);
+                    </li>
+                    <li>il diritto di opporti, per motivi legittimi, al trattamento dei tuoi dati anche qualora pertinenti allo scopo della raccolta;</li>
+                    <li>il diritto di opporti al trattamento dei tuoi dati ai fini di invio di materiale pubblicitario o di vendita diretta o per il compimento di ricerche di mercato o di
+                        comunicazioni commerciali.
+                    </li>
+                </ul>
+
+                <br>
+                <h3 class="text-uppercase"><strong>PROCESSO DECISIONALE AUTOMATIZZATO</strong></h3>
+                <p>Ti comunichiamo che hai inoltre il diritto a non essere sottoposto a una decisione basata unicamente sul trattamento automatizzato dei tuoi dati personali che producano effetti
+                    giuridici che ti riguardano o ancora che incidano in modo analogo significativamente sulla tua persona (a meno che tale attività automatizzata sia necessaria per la conclusione o
+                    l'esecuzione di un contratto tra te e il Titolare, sia autorizzata dal diritto dell'Unione o dello Stato membro cui siamo soggetti come Titolari (che precisai altresì misure
+                    adeguate a tutela dei tuoi diritti, delle tue libertà e dei tuoi legittimi interessi) - o infine che si basi sul tuo consenso esplicito.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>INFORMAZIONI</strong></h3>
+                <p>Puoi esercitare i diritti sopra menzionati in qualunque momento, inoltrando una semplice richiesta a questo indirizzo mail <a href="mailto:info@kopjra.com">info@kopjra.com</a>.</p>
+                <p>Ti contatteremo o informeremo nel più breve tempo possibile e, comunque, entro 30 (trenta) giorni dalla data della tua richiesta.</p>
+
+                <br>
+                <h3 class="text-uppercase"><strong>RECLAMI</strong></h3>
+                <p>Qualora tu ritenga sia stata violata la normativa in materia di protezione dati personali per quanto concerne il trattamento dei tuoi dati, hai inoltre il diritto di presentare un
+                    reclamo davanti all’Autorità locale per la protezione dei dati personali all’interno dell’Area Economica Europea (‘AEE’). Puoi trovare i riferimenti delle singole Autorità, a
+                    seconda del paese in cui ti trovi, cliccando su questo link <a href="http://www.garanteprivacy.it/web/guest/home/footer/link" target="_blank">http://www.garanteprivacy.it/web/guest/home/footer/link.</a>
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+        crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+</body>
+
+</html>

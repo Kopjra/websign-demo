@@ -1,15 +1,14 @@
 import {BaseRoute} from "../libs/baseRoute";
-import {contract, doAction, home, register} from "../controllers";
+import {contract, doAction, home, register} from "../controllers/wias";
 import {validate} from "../validation";
 
-class IndexRoute extends BaseRoute {
+class WiasRoute extends BaseRoute {
 
     constructor(p: string) {
         super(p);
     }
 
-    public async init(): Promise<IndexRoute> {
-
+    public async init(): Promise<WiasRoute> {
         this.router.get("/", home);
         this.router.get("/register", register);
         this.router.get("/contract", contract);
@@ -20,4 +19,4 @@ class IndexRoute extends BaseRoute {
     }
 }
 
-export const indexRoute = new IndexRoute("").init();
+export const wiasRoute = new WiasRoute("/websign").init();
