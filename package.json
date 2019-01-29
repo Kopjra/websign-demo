@@ -12,7 +12,7 @@
     "clean": "rm -rf ./dist",
     "build-ts": "tsc",
     "copy": "cp -R ./src/public ./dist/src/public && cp -R ./src/views ./dist/src/views",
-    "postinstall": "npm tun build",
+    "postinstall": "npm run build",
     "build": "npm run clean && npm run build-ts && npm run copy"
   },
   "author": "",
