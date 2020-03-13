@@ -30,7 +30,7 @@ export class Server {
     }
 
     public start(): Application {
-        const server = this.app.listen(8080, () => {
+        const server = this.app.listen(process.env.PORT, () => {
             print(`WEB : ${(server.address() as AddressInfo).port}`);
         });
 
