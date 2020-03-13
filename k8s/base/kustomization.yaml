@@ -1,0 +1,11 @@
+namespace: wsdemo
+resources:
+- deployment-web.yaml
+- service-web.yaml
+configMapGenerator:
+- name: wsdemo-conf
+secretGenerator:
+- name: wsdemo-secret
+  type: "Opaque"
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization

@@ -1,0 +1,12 @@
+bases:
+- ./../../base
+resources:
+- ingress-web.yaml
+nameSuffix: "-dev"
+commonLabels:
+  env: dev
+patchesStrategicMerge:
+- configmap.yaml
+- secret_unencrypted.yaml
+apiVersion: kustomize.config.k8s.io/v1beta1
+kind: Kustomization

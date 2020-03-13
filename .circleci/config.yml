@@ -1,0 +1,102 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+defaults: &defaults
+  working_directory: ~/repo
+
+version: 2
+jobs:
+  build_and_test:
+    <<: *defaults
+    docker:
+      - image: circleci/node:12
+        environment:
+          NODE_ENV: test
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run build
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+  build_docker_image:
+    <<: *defaults
+    docker:
+      - image: kopjra/n8d-builder
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Building Docker image
+          command: docker build --build-arg ARG_NPM_TOKEN=$NPM_TOKEN -t kopjra/wsdemo .
+      - run:
+          name: Pushing Docker image and persisting Docker Image and Tag in the workspace
+          command: |
+            mkdir -p workspace
+            DOCKER_LOGIN=`aws ecr get-login --no-include-email`
+            /bin/bash -c "$DOCKER_LOGIN"
+            DOCKER_IMAGE_TAG=`git describe --tags`
+            docker tag kopjra/wsdemo:latest 434544098537.dkr.ecr.eu-west-1.amazonaws.com/wsdemo:${DOCKER_IMAGE_TAG}
+            docker push 434544098537.dkr.ecr.eu-west-1.amazonaws.com/wsdemo:${DOCKER_IMAGE_TAG}
+            echo $DOCKER_IMAGE_TAG
+            echo $DOCKER_IMAGE_TAG > workspace/docker_image_tag
+            docker save -o workspace/docker_image.tar kopjra/wsdemo:latest
+            shasum workspace/docker_image.tar
+            cp -R ~/repo/k8s workspace/
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - k8s/*
+            - docker_image_tag
+            - docker_image.tar
+  deploy_development:
+    <<: *defaults
+    docker:
+      - image: kopjra/n8d-builder
+        environment:
+          SOPS_KMS_ARN: "arn:aws:kms:eu-west-1:434544098537:key/399f667a-27fc-448b-a27d-04b91c1eae13"
+    steps:
+      - attach_workspace:
+          at: workspace
+      - run:
+          name: Deploying Docker image
+          command: |
+            DOCKER_IMAGE=434544098537.dkr.ecr.eu-west-1.amazonaws.com/wsdemo:$(cat workspace/docker_image_tag)
+            echo $DOCKER_IMAGE
+            shasum workspace/docker_image.tar
+
+            cd workspace/k8s/overlays/dev
+            sops -d secret.yaml > secret_unencrypted.yaml
+            kustomize edit set image 434544098537.dkr.ecr.eu-west-1.amazonaws.com/wsdemo=$DOCKER_IMAGE
+            kustomize build . > kubernetes.yaml
+            kubectl --server=https://11BBE943F6C693AB5C60A01FE371F474.sk1.eu-west-1.eks.amazonaws.com --insecure-skip-tls-verify --token $KUBERNETES_TOKEN apply -f kubernetes.yaml
+            rm secret_unencrypted.yaml kubernetes.yaml
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build_and_test:
+          context: lyr
+      - build_docker_image:
+          context: lyr
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only:
+                - master
+      - deploy_development:
+          context: lyr
+          requires:
+            - build_docker_image
