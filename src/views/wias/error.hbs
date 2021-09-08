@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:400,700" rel="stylesheet">
+    <title>Web Acquisition - Contract Demo</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/main.css">
+</head>
+
+<body>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+    <a class="navbar-brand" href="/websign">
+        <img src="../img/logo_brand.svg" height="50" alt="">
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarColor01" aria-controls="navbarColor01" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarColor01">
+        <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Chi siamo</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Servizi</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#">Contatti</a>
+            </li>
+        </ul>
+        <!--<form class="form-inline">-->
+            <!--<a href="register.hbs" class="btn btn-outline-success my-2 my-sm-0">Registrati</a>-->
+        <!--</form>-->
+    </div>
+</nav>
+
+<div class="container hero thanks">
+    <div class="row justify-content-center">
+        <div class="container text-center">
+            <img src="../img/logo_brand.svg" class="hero-logo img-responsive">
+            <h1 class="text-uppercase">Errore</h1>
+            <h2>{{error.message}}</h2>
+        </div>
+    </div>
+    <img style="position: fixed; bottom: 10px; right: 10px; opacity: 0.7;" height="40" src='data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 232.45 232.45"><defs><style>.cls-2{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:9px}</style></defs><g id="Livello_2" data-name="Livello 2"><g id="Logo"><circle cx="116.23" cy="116.23" r="112.23" stroke-miterlimit="10" stroke-width="8" fill="none" stroke="#fff"/><path class="cls-2" d="M53.51 112.86l26.3 32.92 26.62-32.92M106.43 112.86l26.3 32.92 46.22-59.39"/></g></g></svg>'/>
+</div>
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+<script>
+    $('.terms-conditions').scroll(function () {
+        if ($(this).scrollTop() == $(this)[0].scrollHeight - $(this).height()) {
+            $('.register').removeAttr('disabled');
+        }
+    });
+</script>
+</body>
+</html>

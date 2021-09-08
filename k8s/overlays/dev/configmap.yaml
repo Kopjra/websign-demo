@@ -1,0 +1,9 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: wsdemo-conf
+  namespace: wsdemo
+data:
+  WIAS_ENDPOINT: https://api-dev.websign.kopjra.com/v1
+  WEBSIGNDEMO_ENDPOINT: http://wsdemo.kopjra.com
+  PORT: "8080"

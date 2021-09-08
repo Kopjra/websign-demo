@@ -1,0 +1,292 @@
+/* GENERAL */
+body {
+  color: #495057;
+  background: #D0D2D5;
+  font-family: 'Roboto', sans-serif;
+}
+
+.row-centered {
+  text-align: center;
+}
+
+.col-centered {
+  display: inline-block;
+  float: none;
+  text-align: center;
+  margin-right: -4px;
+  vertical-align: top;
+}
+
+.btn-outline-success {
+  color: #38d07e;
+  background-color: transparent;
+  background-image: none;
+  border-color: #38d07e;
+}
+
+.btn-outline-success:hover,
+.btn-outline-success:focus {
+  background-color: #38d07e;
+  border-color: #38d07e;
+}
+
+nav {
+  z-index: 10;
+}
+
+/* HERO */
+.hero {
+  margin-top: -75px;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9;
+  position: relative;
+}
+
+.hero-logo {
+  max-width: 500px;
+  margin-bottom: 70px;
+}
+
+.hero h1 {
+  color: #495057;;
+  font-size: 1.6em;
+  font-weight: 700;
+  letter-spacing: 4px;
+  margin-bottom: 70px;
+}
+
+.hero .btn {
+  margin: 0 10px;
+}
+
+.alt-cta {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #38d07e;
+  background-color: transparent;
+  background-image: none;
+  border-color: #38d07e;
+  margin-top: 20px;
+  padding: 10px 50px;
+}
+
+/* CARD */
+.card {
+  border: none;
+  ;
+  margin-top: 50px;
+}
+
+.card-header {
+  padding: 20px;
+  background: #47525c;
+}
+
+/* FORM */
+.form-control {
+  border: 2px solid #aaa;
+  min-height: 45px;
+  box-shadow: none !important;
+}
+
+.form-control:focus {
+  border-color: #0ba250;
+}
+
+.form-control,
+.btn {
+  border-radius: 5px;
+}
+
+.signup-form h2 {
+  color: #fff;
+  display: inline-block;
+}
+
+.signup-form form {
+  color: #444;
+  border-radius: 5px;
+  margin-bottom: 15px;
+  background: #fff;
+  padding: 30px 30px 30px 30px;
+}
+
+.signup-form .form-group {
+  margin-bottom: 20px;
+}
+
+.signup-form label {
+  font-weight: normal;
+  font-size: 1em;
+}
+
+.signup-form .btn, .main-cta {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fff;
+  background: #0ba250;
+  border: none;
+  margin-top: 20px;
+  padding: 10px 50px;
+}
+
+/* CUSTOM CHECKBOX */
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #0ba250;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  background-color: #0ba250;
+}
+
+.custom-checkbox .custom-control-input:disabled:checked ~ .custom-control-label::before {
+  background-color: rgba(51, 188, 114, 0.44);
+}
+
+.custom-checkbox .custom-control-input:checked ~ .custom-control-label::before {
+  background-color: #0ba250;
+}
+
+.custom-control-input:checked ~ .custom-control-label::before {
+  color: #fff;
+  background-color: #0ba250;
+}
+
+/* MODAL */
+.modal-footer .btn {
+  font-size: 1.3em;
+  font-weight: bold;
+  color: #fff;
+  background: #0ba250;
+  border: none;
+  padding: 10px 50px;
+}
+
+@media (min-width: 576px) {
+  .modal-dialog {
+    max-width: 1000px;
+    margin: 1.75rem auto;
+  }
+}
+
+/* TERMS */
+.terms-conditions {
+  height: 300px;
+  overflow-y: scroll;
+  margin: 30px 0px 0px;
+}
+
+/* THANK YOU PAGE */
+.thanks h1 {
+  margin-bottom: 30px;
+}
+
+.thanks h2 {
+  font-size: 1.5em;
+  color: #888;
+}
+
+/* ANCHORS */
+.signup-form .btn:hover,
+.signup-form .btn:focus,
+.modal-footer .btn:hover,
+.modal-footer .btn:focus {
+  background: #38d07e;
+  outline: none !important;
+}
+
+.signup-form a,
+a {
+  color: #0ba250;
+  font-weight: bold;
+  text-decoration: underline;
+}
+
+.navbar a, .hero a {
+  text-decoration: none;
+}
+
+.signup-form a:hover,
+#exampleModal a:hover {
+  color: #38d07e !important;
+}
+
+.signup-form form a {
+  color: #0ba250;
+}
+
+.signup-form form a:hover {
+  text-decoration: underline;
+}
+
+/* CROSSFADING BGs */
+.crossfade > figure {
+  animation: imageAnimation 30s linear infinite 0s;
+  backface-visibility: hidden;
+  background-size: cover;
+  background-position: center center;
+  color: transparent;
+  height: 100%;
+  left: 0px;
+  opacity: 0;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  z-index: 0;
+}
+
+.crossfade > figure:nth-child(1) {
+  background-image: url('../img/1.jpg');
+}
+
+.crossfade > figure:nth-child(2) {
+  animation-delay: 6s;
+  background-image: url('../img/2.jpg');
+}
+
+.crossfade > figure:nth-child(3) {
+  animation-delay: 12s;
+  background-image: url('../img/3.jpg');
+}
+
+.table td {
+  border-top: none !important;
+}
+
+.table {
+  border: 2px solid #DEE2E6 !important;
+}
+
+.table th {
+  background-color: #DEE2E6 !important;
+  border: none !important;
+  color: #495057 !important;
+}
+
+@keyframes imageAnimation {
+  0% {
+    animation-timing-function: ease-in;
+    opacity: 0;
+  }
+
+  8% {
+    animation-timing-function: ease-out;
+    opacity: 1;
+  }
+
+  17% {
+    opacity: 1
+  }
+
+  25% {
+    opacity: 0
+  }
+
+  100% {
+    opacity: 0
+  }
+}

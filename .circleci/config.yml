@@ -1,0 +1,87 @@
+# Javascript Node CircleCI 2.0 configuration file
+#
+# Check https://circleci.com/docs/2.0/language-javascript/ for more details
+#
+defaults: &defaults
+  working_directory: ~/repo
+
+version: 2
+jobs:
+  build_and_test:
+    <<: *defaults
+    docker:
+      - image: circleci/node:12
+        environment:
+          NODE_ENV: test
+    steps:
+      - checkout
+      - restore_cache:
+          keys:
+            - v1-dependencies-{{ checksum "package.json" }}
+            - v1-dependencies-
+      - run: npm install
+      - save_cache:
+          paths:
+            - node_modules
+          key: v1-dependencies-{{ checksum "package.json" }}
+      - run: npm run build
+      - persist_to_workspace:
+          root: ~/repo
+          paths: .
+  build_docker_image:
+    <<: *defaults
+    docker:
+      - image: kopjra/n8d-builder
+    steps:
+      - attach_workspace:
+          at: ~/repo
+      - setup_remote_docker:
+          docker_layer_caching: true
+      - run:
+          name: Building Docker image
+          command: docker build --build-arg ARG_NPM_TOKEN=$NPM_TOKEN -t kopjra/wsdemo .
+      - run:
+          name: Pushing Docker image and persisting Docker Image and Tag in the workspace
+          command: |
+            mkdir -p workspace
+            DOCKER_IMAGE_TAG=`git describe --tags`
+            echo $DOCKER_IMAGE_TAG > workspace/docker_image_tag
+            . docker_image_pusher --use_gcp --docker_local_image_fullname kopjra/wsdemo:latest --docker_repository wsdemo --docker_registry $DOCKER_REGISTRY --docker_tag $DOCKER_IMAGE_TAG --gcp_project $GCP_PROJECT --export_path workspace/docker_image.tar
+            cp -R ~/repo/k8s workspace/
+      - persist_to_workspace:
+          root: workspace
+          paths:
+            - k8s/*
+            - docker_image_tag
+            - docker_image.tar
+  deploy_development:
+    <<: *defaults
+    docker:
+      - image: kopjra/n8d-builder
+        environment:
+          SOPS_KMS_ARN: "arn:aws:kms:eu-west-1:434544098537:key/399f667a-27fc-448b-a27d-04b91c1eae13"
+    steps:
+      - attach_workspace:
+          at: workspace
+      - run:
+          name: Deploying Docker image
+          command: |
+            . kube_deployer --kustomization_path workspace/k8s/overlays/dev --docker_repository wsdemo --docker_tag $(cat workspace/docker_image_tag) --kubernetes_server $KUBERNETES_SERVER --kubernetes_token $KUBERNETES_TOKEN --docker_registry $DOCKER_REGISTRY
+workflows:
+  version: 2
+  build-deploy:
+    jobs:
+      - build_and_test:
+          context: virgo
+      - build_docker_image:
+          context: virgo
+          requires:
+            - build_and_test
+          filters:
+            branches:
+              only:
+                - master
+      - deploy_development:
+          context: virgo
+          requires:
+            - build_docker_image

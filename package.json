@@ -1,0 +1,38 @@
+{
+  "name": "wias-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "engines": {
+    "node": "8.15.0"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node ./dist/src/server.js",
+    "clean": "rm -rf ./dist",
+    "build-ts": "tsc",
+    "copy": "ncp ./src/public ./dist/src/public && ncp ./src/views ./dist/src/views",
+    "postinstall": "npm run build",
+    "build": "npm run clean && npm run build-ts && npm run copy"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/body-parser": "^1.17.0",
+    "@types/express": "^4.16.0",
+    "@types/joi": "^14.0.0",
+    "@types/request": "^2.48.1",
+    "ncp": "2.0.0",
+    "typescript": "^3.1.6"
+  },
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "debug": "^4.1.0",
+    "express": "^4.16.4",
+    "express-joi-validation": "^0.3.0",
+    "figlet": "^1.2.1",
+    "hbs": "^4.0.1",
+    "joi": "^14.3.0",
+    "request": "^2.88.0"
+  }
+}
